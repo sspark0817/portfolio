@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>박수성 포트폴리오</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#darkModeBtn {
+    float: right;
+    border: none;
+    background: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.info {
+    color: #666;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-info h1 {
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.skill {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.project {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-top: 15px;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.project ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.project li {
+    margin-bottom: 5px;
+}
+
+.github-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.github-btn:hover,
+#darkModeBtn:hover {
+    opacity: 0.9;
+}
+
+.goal {
+    background-color: #eef7ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.contact {
+    margin-top: 15px;
+}
+
+.contact p {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: gray;
+    font-size: 14px;
+}
+
+/* 다크모드 */
+.dark-mode {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+}
+
+.dark-mode .project {
+    background: #2a2a2a;
+}
+
+.dark-mode .goal {
+    background: #2a2a2a;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: #5dade2;
+}
+
+.dark-mode .info {
+    color: #cccccc;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .skill {
+        display: block;
+        text-align: center;
+        margin: 8px 0;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    #darkModeBtn {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    .profile-img {
+    width: 120px;
+    height: 160px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    .header-container {
+    flex-direction: column;
+    }
+
+  .profile-info {
+    text-align: center;
+    }
+    .info {
+        font-size: 14px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header> 
+    <button id="darkModeBtn">🌙 다크모드</button>
+    <div class="header-container">
+        <img src="myphoto.jpg" alt="프로필 사진" class="profile-img">
+        <div class="profile-info">
+            <h1>박수성 포트폴리오</h1>
+            <div class="info">
+                Java Developer Beginner<br>
+                Email : sspark0817@naver.com<br>
+                GitHub :
+                <a href="https://github.com/sspark0817" target="_blank">
+                    github.com/sspark0817
+                </a>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>소개</h2>
+
+    <p>
+        안녕하세요. Java와 웹 개발을 공부하고 있는 박수성입니다.
+        현재 오픈소스SW개발 팀 프로젝트를 통해 GitHub 협업 경험을 쌓고 있으며,
+        객체지향 프로그래밍과 웹 개발 기술을 학습하고 있습니다.
+    </p>
+
+    <p>
+        특히 GitHub Branch 전략, Pull Request, Issue 관리 등을 활용한 협업 과정에 관심이 많으며,
+        실제 프로젝트에서 기능 구현과 유지보수를 경험하며 개발 역량을 키워가고 있습니다.
+    </p>
+</section>
+    <section>
+        <h2>기술 스택</h2>
+
+        <div class="skill-container">
+            <span class="skill">Java</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>프로젝트</h2>
+
+     <div class="project">
+    <h3>오픈소스SW개발 팀 프로젝트 (Kiosk Program)</h3>
+
+    <p>
+        오픈소스SW개발 과목에서 진행한 Java 기반 키오스크 프로그램입니다.
+        GitHub를 활용하여 브랜치 생성, 커밋, Pull Request, Issue 관리 과정을 경험하였으며,
+        팀 저장소(esae-dev/oss-team-project)를 통해 협업을 진행하였습니다.
+    </p>
+
+    <p>
+        프로젝트 진행 과정에서 기능 구현과 유지보수를 담당하며
+        객체지향 프로그래밍과 협업 프로세스를 학습하였습니다.
+    </p>
+
+    <p>
+        <strong>담당 역할</strong>
+    </p>
+
+    <ul>
+        <li>Category.java 구현</li>
+        <li>Option.java 구현</li>
+        <li>Menu.java 유지보수</li>
+        <li>Receipt.java 유지보수</li>
+        <li>InputCheck.java 유지보수</li>
+        <li>GitHub Branch 전략 활용</li>
+        <li>Pull Request 기반 협업</li>
+        <li>Issue 기반 작업 관리</li>
+    </ul>
+
+    <a href="https://github.com/esae-dev/oss-team-project"
+       target="_blank"
+       class="github-btn">
+       팀 프로젝트 GitHub
+    </a>
+</div>
+
+        <div class="project">
+            <h3>개인 포트폴리오 웹페이지</h3>
+
+            <p>
+                HTML과 CSS를 활용하여 자기소개 포트폴리오 웹페이지를 제작하였습니다.
+                PC와 모바일 환경에 맞추어 화면이 자동으로 최적화되도록 반응형 웹을 적용하였고,
+                JavaScript를 사용하여 다크모드 기능을 구현하였습니다.
+            </p>
+
+            <ul>
+                <li>HTML 구조 작성</li>
+                <li>CSS 디자인 적용</li>
+                <li>반응형 웹 구현</li>
+                <li>다크모드 버튼 구현</li>
+                <li>프로필 이미지 적용</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>학습 중인 기술</h2>
+
+        <ul>
+            <li>Java 객체지향 프로그래밍</li>
+            <li>Git & GitHub 협업</li>
+            <li>웹 프론트엔드 개발</li>
+            <li>자료구조 및 알고리즘</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>목표</h2>
+
+        <div class="goal">
+            꾸준한 학습과 프로젝트 경험을 통해
+            실무 역량을 갖춘 개발자로 성장하는 것이 목표입니다.
+            새로운 기술을 배우는 것을 즐기며,
+            협업 능력과 문제 해결 능력을 지속적으로 향상시키고 있습니다.
+        </div>
+    </section>
+
+    <section>
+    <h2>연락처</h2>
+
+    <div class="contact">
+        <p><strong>Email :</strong> sspark0817@naver.com</p>
+
+        <p>
+            <strong>GitHub Profile :</strong>
+            https://github.com/sspark0817
+        </p>
+
+        <p>
+            <strong>Team Project :</strong>
+            https://github.com/esae-dev/oss-team-project
+        </p>
+
+        <a href="https://github.com/sspark0817"
+           target="_blank"
+           class="github-btn">
+           GitHub 프로필 보기
+        </a>
+        
+    </div>
+</section>
+
+    <footer>
+        © 2026 박수성 Portfolio
+    </footer>
+
+</div>
+
+<script>
+const darkBtn = document.getElementById("darkModeBtn");
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    darkBtn.textContent = "☀️ 라이트모드";
+}
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        darkBtn.textContent = "☀️ 라이트모드";
+    } else {
+        localStorage.setItem("theme", "light");
+        darkBtn.textContent = "🌙 다크모드";
+    }
+});
+</script>
+
+</body>
+</html>
